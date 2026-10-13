@@ -65,7 +65,7 @@ namespace Encapsulation_ovning4.Models
 		//SOLUTION 2 ToString: Salary increase 
 		public override string ToString()
 		{
-			return $"{FirstName} {LastName} receives {Salary} dollars.";
+			return $"{FirstName} {LastName} receives {Salary:F2} dollars.";
 
 		}
 		public void IncreaseSalary(decimal percentage)

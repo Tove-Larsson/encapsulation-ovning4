@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="Encapsulation-ovning4.Tests"/>
+    <InternalsVisibleTo Include="Encapsulation-ovning4.Tests" />
   </ItemGroup>
 
 </Project>

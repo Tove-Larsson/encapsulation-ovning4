@@ -1,4 +1,5 @@
 ﻿using Encapsulation_ovning4.Models;
+using Encapsulation_ovning4.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,9 +30,7 @@ namespace Encapsulation_ovning4
 
 			// SOLUTION 2: Salary increase 
 
-			Console.WriteLine("How many persons do you want to enter?\n");
-
-			var lines = int.Parse(Console.ReadLine());
+			var lines = ConsoleInput.ReadInt("How many persons do you want to enter?\n", 1);
 			var persons = new List<Person>();
 
 			Console.WriteLine("\nEnter each person on a separate line.");
@@ -58,8 +57,7 @@ namespace Encapsulation_ovning4
 				}
 			}
 
-			Console.WriteLine("\nEnter salary bonus percentage (e.g. 20): \n");
-			var bonus = decimal.Parse(Console.ReadLine());
+			var bonus = ConsoleInput.ReadDecimal("Enter salary bonus percentage (e.g. 20): ");
 			persons.ForEach(p => p.IncreaseSalary(bonus));
 
 			Console.WriteLine("\n--- Salary report ---\n");

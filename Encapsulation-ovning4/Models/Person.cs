@@ -46,7 +46,7 @@ namespace Encapsulation_ovning4.Models
 
 		public override string ToString()
 		{
-			return $"{FirstName} {LastName} {Age}";
+			return $"{FirstName} {LastName} is {Age} years old.";
 		}
 	}
 }

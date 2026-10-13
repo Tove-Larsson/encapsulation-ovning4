@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 
 namespace Encapsulation_ovning4.Models
 {
@@ -23,6 +23,11 @@ namespace Encapsulation_ovning4.Models
 			get { return _firstName; }
 			set
 			{
+				if (value.Length < 3)
+				{
+					throw new ArgumentException(
+						"First name cannot contain fewer than 3 symbols!");
+				}
 				_firstName = value;
 			}
 		}
@@ -31,6 +36,11 @@ namespace Encapsulation_ovning4.Models
 			get { return _lastName; }
 			set
 			{
+				if (value.Length < 3)
+				{
+					throw new ArgumentException(
+						"Last name cannot contain fewer than 3 symbols!");
+				}
 				_lastName = value;
 			}
 		}
@@ -40,6 +50,13 @@ namespace Encapsulation_ovning4.Models
 			get { return _age; }
 			set
 			{
+
+				if (value <= 0)
+				{
+					throw new ArgumentException(
+						"Age cannot be zero or a negative integer!");
+				}
+
 				_age = value;
 			}
 		}
@@ -49,6 +66,13 @@ namespace Encapsulation_ovning4.Models
 			get { return _salary; }
 			set
 			{
+
+				if (value < 460)
+				{
+					throw new ArgumentException(
+						"Salary cannot be less than 460 dollars!");
+				}
+
 				_salary = value;
 			}
 		}

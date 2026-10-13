@@ -10,11 +10,12 @@ namespace Encapsulation_ovning4.Models
 
 		private decimal _salary;
 
-		public Person(string firstName, string lastName, int age)
+		public Person(string firstName, string lastName, int age, decimal salary)
 		{
 			FirstName = firstName;
 			LastName = lastName;
 			Age = age;
+			Salary = salary;
 		}
 
 		public string FirstName

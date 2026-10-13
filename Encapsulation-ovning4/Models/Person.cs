@@ -23,7 +23,7 @@ namespace Encapsulation_ovning4.Models
 			get { return _firstName; }
 			set
 			{
-				if (value.Length < 3)
+				if (string.IsNullOrWhiteSpace(value) || value.Length < 3)
 				{
 					throw new ArgumentException(
 						"First name cannot contain fewer than 3 symbols!");
@@ -36,7 +36,7 @@ namespace Encapsulation_ovning4.Models
 			get { return _lastName; }
 			set
 			{
-				if (value.Length < 3)
+				if (string.IsNullOrWhiteSpace(value) || value.Length < 3)
 				{
 					throw new ArgumentException(
 						"Last name cannot contain fewer than 3 symbols!");

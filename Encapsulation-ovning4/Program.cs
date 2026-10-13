@@ -29,8 +29,13 @@ namespace Encapsulation_ovning4
 
 			// SOLUTION 2: Salary increase 
 
+			Console.WriteLine("How many persons do you want to enter?\n");
+
 			var lines = int.Parse(Console.ReadLine());
 			var persons = new List<Person>();
+
+			Console.WriteLine("\nEnter each person on a separate line.");
+			Console.WriteLine("Format: FirstName LastName Age Salary\n");
 
 			for (int i = 0; i < lines; i++)
 			{
@@ -53,8 +58,11 @@ namespace Encapsulation_ovning4
 				}
 			}
 
+			Console.WriteLine("\nEnter salary bonus percentage (e.g. 20): \n");
 			var bonus = decimal.Parse(Console.ReadLine());
 			persons.ForEach(p => p.IncreaseSalary(bonus));
+
+			Console.WriteLine("\n--- Salary report ---\n");
 			persons.ForEach(p => Console.WriteLine(p.ToString()));
 
 		}
